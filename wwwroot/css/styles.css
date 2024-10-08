@@ -1,0 +1,279 @@
+﻿/* General styles for the page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1, h2, h3, p {
+    color: #333;
+}
+
+/* Container styles */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+/* File input styling */
+.file-form {
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px;
+}
+
+.file-input {
+    margin: 10px 5px 10px 0; /* Adjust margin for better spacing */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1; /* Allow the input to grow */
+}
+
+/* Save button styling */
+#saveImage {
+    margin: auto;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    #saveImage:hover {
+        background-color: #0056b3;
+    }
+
+/* Auth styles for login/signup */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.form-box {
+    padding: 20px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.form-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #333;
+}
+
+    .form-toggle.active {
+        border-bottom: 3px solid #007bff;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+.auth-form {
+    display: block;
+    text-align: left;
+}
+
+    .auth-form.hidden {
+        display: none;
+    }
+
+    .auth-form h3 {
+        margin-bottom: 20px;
+        color: #007bff;
+    }
+
+    .auth-form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .auth-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+.primary-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+    .primary-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Image Editor controls */
+.controls {
+    margin: 20px 0;
+    text-align: left;
+}
+
+    .controls label {
+        display: block;
+        margin: 10px 0 5px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+.slider {
+    width: 100%;
+    height: 25px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.edit-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 120px;
+    font-size: 0.9rem;
+}
+
+    .edit-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Slider buttons */
+.slider-buttons {
+    margin: 15px 0;
+}
+
+.slider-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+    .slider-btn:hover {
+        background-color: #218838;
+    }
+
+/* Canvas styling */
+#photoCanvas {
+    border: 5px solid red; /* Change border color */
+    margin: 10px auto; /* Center canvas */
+    display: block; /* Center alignment */
+    width: 20%; /* Set width to 20% */
+    height: auto; /* Maintain aspect ratio */
+    //max-height: 200px; /* Limit height for better layout */
+}
+
+.canvas-container {
+   // max-height: 237px;
+}
+
+/* Progress bars styling */
+.brightness-progress,
+.contrast-progress,
+.saturation-progress {
+    display: none; /* Hide by default */
+    margin-top: 10px;
+}
+
+    .brightness-progress input,
+    .contrast-progress input,
+    .saturation-progress input {
+        width: 100%;
+    }
+
+/* Download link styling */
+.download-link {
+    display: inline-block;
+    margin-top: 0;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+    .download-link:hover {
+        background-color: #0056b3;
+    }
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .auth-container {
+        padding: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .edit-btn, .slider-btn {
+        margin: 10px 0;
+    }
+
+    .form-header {
+        flex-direction: column;
+    }
+
+    .form-toggle {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust canvas for smaller screens */
+    #photoCanvas {
+        width: 80%; /* Increase width on smaller screens */
+        max-height: 150px; /* Adjust max height */
+    }
+}
